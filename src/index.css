@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #000;
+    color: #f5f5f7;
+    line-height: 1.6;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(10, 132, 255, 0.3);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0a84ff;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+/* Top bar: transparent at the top of the page, frosted once you scroll. */
+.top-bar-integrated {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.top-bar-glossy {
+  background: rgba(10, 10, 12, 0.72);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Buttons. One shape for every call to action on the page. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.btn-md { padding: 10px 18px; font-size: 0.9375rem; }
+.btn-sm { padding: 7px 14px; font-size: 0.875rem; }
+.btn:active:not(:disabled) { transform: scale(0.98); }
+
+.btn-primary {
+  background: #f5f5f7;
+  color: #000;
+  border: 1px solid #f5f5f7;
+}
+.btn-primary:hover { background: #fff; border-color: #fff; }
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f5f5f7;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.22); }
+
+.btn:disabled {
+  background: rgba(255, 255, 255, 0.04);
+  color: #6e6e73;
+  border-color: rgba(255, 255, 255, 0.08);
+  cursor: not-allowed;
+}
+
+/* Frosted card used for the download panel. */
+.apple-material-card {
+  background: rgba(22, 22, 23, 0.72);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 16px 36px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Segmented control for the platform picker. */
+.apple-segmented-container {
+  display: inline-flex;
+  background: rgba(118, 118, 128, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.apple-segmented-item {
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #a1a1a6;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.apple-segmented-item:hover { color: #fff; }
+.apple-segmented-item.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #f5f5f7;
+}
+
+/* The big wordmark at the bottom: the letters are a window onto the petal artwork. */
+.lotus-window-cutout {
+  font-family: 'Fascinate', cursive, sans-serif;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  letter-spacing: -0.01em;
+  user-select: none;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #2c2c2e; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a3c; }
