@@ -2,9 +2,12 @@ import React from 'react';
 import { Download, Github } from 'lucide-react';
 import { GlassLotusHero } from './GlassLotusHero';
 import { Button } from './Button';
-import { REPO, VERSION } from '../site';
+import { REPO } from '../site';
+import { useLatestVersion } from '../hooks/useLatestVersion';
 
-export const Hero: React.FC = () => (
+export const Hero: React.FC = () => {
+  const version = useLatestVersion();
+  return (
   <section id="top" className="relative overflow-x-clip pb-24 pt-16 sm:pt-24 md:pb-32">
     <GlassLotusHero className="top-0" />
 
@@ -22,8 +25,8 @@ export const Hero: React.FC = () => (
       </h1>
 
       <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-[#e5e5ea] drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] sm:text-[1.1875rem]">
-        Chat, images, voice, research and an app builder for Windows, running on models that
-        live on your own PC.
+        Chat, images, voice, research and an app builder for Windows, macOS and Linux, running on
+        models that live on your own computer.
       </p>
 
       <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -34,8 +37,9 @@ export const Hero: React.FC = () => (
       </div>
 
       <p className="mt-5 text-[0.8125rem] text-[#a1a1a6] drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
-        Early preview · version {VERSION} · Windows 10 and 11
+        Early preview · version {version} · Windows, macOS and Linux
       </p>
     </div>
   </section>
-);
+  );
+};

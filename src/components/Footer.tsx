@@ -10,7 +10,7 @@ export const Footer: React.FC = () => (
   <footer className="border-t border-white/[0.08]">
     <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-[0.8125rem] text-[#86868b] sm:flex-row sm:px-6">
       <p>
-        <span className="text-[#d1d1d6]">Lotus</span> · A local AI studio for Windows
+        <span className="text-[#d1d1d6]">Lotus</span> · A local AI studio for Windows, macOS and Linux
       </p>
       <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
         {LINKS.map((l) => (

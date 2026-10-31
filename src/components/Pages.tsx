@@ -69,7 +69,7 @@ const EXTRAS = [
   ['Floating island', 'A small always-on-top pill for quick chat, dictation and reading the clipboard aloud. It can also approve or deny permission requests from a coding agent in your terminal.'],
   ['Sized to your GPU', 'Lotus checks free video memory every few seconds and adjusts context length, model choice and how many background jobs run at once.'],
   ['One list of models', 'Language, image, LoRA and voice models in one place. Pull any model by name and compare them in the Arena.'],
-  ['Light or dark', 'Follows your Windows theme, or set it yourself. Both side panels fold away when you want the room.'],
+  ['Light or dark', 'Follows your system light or dark setting, or set it yourself. Both side panels fold away when you want the room.'],
 ];
 
 export const Pages: React.FC = () => (
