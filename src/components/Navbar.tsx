@@ -4,7 +4,8 @@ import { Button } from './Button';
 import { REPO } from '../site';
 
 const LINKS = [
-  { href: '#pages', label: 'Pages' },
+  { href: '#tour', label: 'Tour' },
+  { href: '#new', label: "What's new" },
   { href: '#how-it-works', label: 'How it works' },
   { href: '#privacy', label: 'Privacy' },
   { href: REPO, label: 'GitHub', external: true },

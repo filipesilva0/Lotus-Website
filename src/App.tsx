@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Showcase } from './components/Showcase';
-import { Pages } from './components/Pages';
+import { Tour } from './components/Tour';
+import { WhatsNew } from './components/WhatsNew';
+import { Features } from './components/Features';
 import { HowItWorks } from './components/HowItWorks';
 import { Privacy } from './components/Privacy';
 import { Download } from './components/Download';
@@ -18,8 +19,9 @@ export default function App() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <Showcase />
-        <Pages />
+        <Tour />
+        <WhatsNew />
+        <Features />
         <HowItWorks />
         <Privacy />
         <Download />
