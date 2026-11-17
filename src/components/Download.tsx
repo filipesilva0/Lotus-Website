@@ -65,9 +65,9 @@ const PLATFORMS: Record<Platform, {
 };
 
 const STEPS = [
-  ['Install the engines you want', 'Ollama for chat, research, the App Builder and tasks. ComfyUI for images. Voicebox for voice.'],
-  ['Open Engines in Lotus', 'Lotus finds Ollama by itself. Point it once at ComfyUI and Voicebox, then press Start. Turn on Start with Lotus and forget about it.'],
-  ['Get a model', 'Open Models, type a name such as qwen2.5:7b and download it. That’s it.'],
+  ['Install Lotus', 'Download the file for your system and open it. On Windows it installs to Documents\\Lotus Studio, no admin rights needed.'],
+  ['Follow the setup guide', 'Choose Lotus’s own engines (nothing else to install) or the Ollama, ComfyUI and Voicebox you already use.'],
+  ['Pick your models', 'The guide suggests a chat, an image and a voice model that fit your graphics card. They download in the background.'],
 ];
 
 export const Download: React.FC = () => {

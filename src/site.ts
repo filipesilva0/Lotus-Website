@@ -14,7 +14,7 @@ export const FILES = {
 } as const;
 
 /** Shown until the newest release's version has been read from GitHub. */
-export const VERSION = '0.1.0';
+export const VERSION = '0.11.0';
 
 /** Version of the newest published release (e.g. "0.2.0"), or null if it can't be read. */
 export async function latestVersion(): Promise<string | null> {

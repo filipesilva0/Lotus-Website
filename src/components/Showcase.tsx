@@ -5,15 +5,15 @@ export const Showcase: React.FC = () => (
     <figure>
       <div className="overflow-hidden rounded-[14px] border border-white/10 bg-[#0c0d10] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]">
         <img
-          src="/assets/screenshot-images.png"
+          src="/assets/screenshot-work.png"
           width={1360}
           height={860}
-          alt="The Lotus window on the Images page: a sidebar of projects, an empty canvas with a prompt box, and a panel of image settings."
+          alt="The Lotus window on the Work page: Lotus deployed three agents, Researcher, Writer and Checker, and combined their parts into a Knee plan document shown in the Artifacts panel."
           className="block h-auto w-full"
         />
       </div>
       <figcaption className="mt-4 text-center text-[0.8125rem] text-[#86868b]">
-        The Images page. Every page shares the same sidebar, prompt box and settings panel.
+        The Work page. Lotus split the job between three agents and handed back a document.
       </figcaption>
     </figure>
   </section>

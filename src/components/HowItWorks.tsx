@@ -2,9 +2,9 @@ import React from 'react';
 import { PETAL } from '../site';
 
 const ENGINES = [
-  { name: 'Ollama', kind: 'Language models', uses: 'Chat, research, App Builder, tasks', port: '11434', color: PETAL.blue },
-  { name: 'ComfyUI', kind: 'Image models', uses: 'Images', port: '8188', color: PETAL.red },
-  { name: 'Voicebox', kind: 'Voice models', uses: 'Voice, dictation, read aloud', port: '17493', color: PETAL.orange },
+  { name: 'llama.cpp', kind: 'Chat models', uses: 'Chat, Work, research, tasks', alt: 'Ollama', color: PETAL.blue },
+  { name: 'stable-diffusion.cpp', kind: 'Image models', uses: 'Images', alt: 'ComfyUI', color: PETAL.orange },
+  { name: 'sherpa-onnx', kind: 'Voice models', uses: 'Calls, speech, transcripts', alt: 'Voicebox', color: PETAL.yellow },
 ];
 
 export const HowItWorks: React.FC = () => (
@@ -12,23 +12,24 @@ export const HowItWorks: React.FC = () => (
     <div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center">
       <div>
         <h2 className="text-[2rem] font-bold leading-tight tracking-tight text-white sm:text-[2.5rem]">
-          One window, three engines.
+          Its own engines, or yours.
         </h2>
         <div className="mt-5 space-y-4 text-[1.0625rem] leading-relaxed text-[#a1a1a6]">
           <p>
-            The heavy lifting happens in three engines you install yourself. Lotus starts them,
-            watches them and gives them one interface. It talks to each one over your own
-            machine's local address, so prompts, images and voices stay on the PC.
+            Lotus comes with its own engines, downloaded once into your Lotus Studio folder
+            together with your models. There is nothing else to install, and prompts, images and
+            voices never leave your computer.
           </p>
           <p>
-            Install only the engines you want. If one isn't running, the page that needs it
-            says so and offers to start it.
+            Already use Ollama, ComfyUI or Voicebox? Pick them in Settings and Lotus drives them
+            instead. If an engine or a model is missing, the page that needs it says so and offers
+            to get it.
           </p>
         </div>
       </div>
 
       <div className="rounded-[20px] border border-dashed border-white/15 p-5 sm:p-7">
-        <div className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">Your PC</div>
+        <div className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">Your computer</div>
         <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/[0.04] px-5 py-4 sm:flex-col sm:px-6 sm:py-7">
             <img src="/assets/lotus-mark.png" alt="" className="h-10 w-10 sm:h-14 sm:w-14" />
@@ -47,7 +48,7 @@ export const HowItWorks: React.FC = () => (
                   <div className="truncate text-[0.8125rem] text-[#a1a1a6]">{e.uses}</div>
                 </div>
                 <code className="hidden shrink-0 rounded-[6px] border border-white/10 px-2 py-1 font-mono text-[0.75rem] text-[#a1a1a6] sm:block">
-                  127.0.0.1:{e.port}
+                  or {e.alt}
                 </code>
               </li>
             ))}

@@ -1,10 +1,11 @@
 import React from 'react';
 
 const ROWS = [
-  ['Chat, images, voice, memory, tasks', 'Never', 'Nothing. It all stays on your PC.'],
+  ['Chat, Work, images, voice, memory, tasks', 'Never', 'Nothing. It all stays on your computer.'],
   ['Web in chat', 'When you turn it on', 'Your question to the search service you pick, then a request to each top result'],
+  ['Chrome control in Work', 'When you turn it on, and each action asks', 'What the pages Lotus opens for you would receive from any browser'],
   ['Deep Research', 'During a research run', 'Short keyword queries to the academic databases you tick'],
-  ['Model downloads', 'When you press Download', 'A request to the link you pasted'],
+  ['Engine and model downloads', 'When you pick or download them', 'A request to that project’s own site (GitHub, Hugging Face, Ollama) or the link you pasted'],
   ['Update check', 'When you ask, or at launch if you opt in', 'A request to the project’s GitHub Releases'],
 ];
 
@@ -12,7 +13,7 @@ export const Privacy: React.FC = () => (
   <section id="privacy" className="mx-auto mb-32 max-w-6xl scroll-mt-24 px-4 sm:px-6">
     <div className="mb-10 max-w-2xl">
       <h2 className="text-[2rem] font-bold leading-tight tracking-tight text-white sm:text-[2.5rem]">
-        What leaves your PC.
+        What leaves your computer.
       </h2>
       <p className="mt-4 text-[1.0625rem] leading-relaxed text-[#a1a1a6]">
         No account, no telemetry, no analytics. Nothing goes online unless you switch it on,
@@ -35,7 +36,7 @@ export const Privacy: React.FC = () => (
       ))}
     </div>
     <p className="mt-5 text-[0.875rem] text-[#86868b]">
-      Memory is a single file in your Lotus data folder. Skills are plain text files you can open and edit.
+      Chats, memory and tasks live in one file in Lotus Studio/Data. Skills are plain text files you can open and edit.
     </p>
   </section>
 );

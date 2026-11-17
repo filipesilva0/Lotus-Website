@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
       </h1>
 
       <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-[#e5e5ea] drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] sm:text-[1.1875rem]">
-        Chat, images, voice, research and an app builder for Windows, macOS and Linux, running on
+        Chat, agents that get work done, images and voice for Windows, macOS and Linux, running on
         models that live on your own computer.
       </p>
 
