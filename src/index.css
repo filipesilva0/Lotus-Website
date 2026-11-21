@@ -1,4 +1,10 @@
 @import "tailwindcss";
+/* Fonts are bundled with the site, so visiting it sends nothing to a font service. */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/fascinate/400.css";
 
 @layer base {
   html {
@@ -122,3 +128,18 @@
 ::-webkit-scrollbar-track { background: #000; }
 ::-webkit-scrollbar-thumb { background: #2c2c2e; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #3a3a3c; }
+
+/* Long-form text on Docs, Privacy and the comparison pages. */
+.prose-lotus { color: #a1a1a6; font-size: 1rem; line-height: 1.7; }
+.prose-lotus h2 { color: #fff; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin: 3rem 0 0.75rem; scroll-margin-top: 6rem; }
+.prose-lotus h3 { color: #f5f5f7; font-size: 1.125rem; font-weight: 600; margin: 2rem 0 0.5rem; scroll-margin-top: 6rem; }
+.prose-lotus p, .prose-lotus ul, .prose-lotus ol { margin: 0.75rem 0; }
+.prose-lotus ul { list-style: disc; padding-left: 1.25rem; }
+.prose-lotus ol { list-style: decimal; padding-left: 1.25rem; }
+.prose-lotus li { margin: 0.35rem 0; }
+.prose-lotus li::marker { color: #6e6e73; }
+.prose-lotus a { color: #0a84ff; }
+.prose-lotus a:hover { text-decoration: underline; }
+.prose-lotus strong { color: #f5f5f7; font-weight: 600; }
+.prose-lotus code { background: rgba(255,255,255,0.08); border-radius: 5px; padding: 0.1em 0.4em; font-size: 0.875em; color: #f5f5f7; }
+.prose-lotus > :first-child { margin-top: 0; }

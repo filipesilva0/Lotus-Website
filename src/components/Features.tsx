@@ -1,4 +1,5 @@
 import React from 'react';
+import { asset } from '../site';
 
 const SMALL = [
   ['Floating island', 'A small black island at the top of the screen shows running agents and jobs, opens for quick questions and lets you answer Lotus. Off until you turn it on.'],
@@ -21,7 +22,7 @@ export const Features: React.FC = () => (
         </p>
       </div>
       <figure className="overflow-hidden rounded-[14px] border border-white/10 bg-[#1e1e1e] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]">
-        <img src="/assets/tour/models.webp" width={1360} height={860} loading="lazy" className="block h-auto w-full"
+        <img src={asset('/assets/tour/models.webp')} width={1360} height={860} loading="lazy" className="block h-auto w-full"
           alt="Models: one catalog of chat, image and voice models with size, licence and a Get button, filtered by kind in the sidebar." />
       </figure>
     </div>

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Petal } from './Button';
-import { PETAL } from '../site';
+import { PETAL , asset } from '../site';
 
 // One real screenshot per page, taken from the app (lotus repo: handover/screenshots/shoot-site.mjs).
 const PAGES = [
@@ -8,7 +8,7 @@ const PAGES = [
     id: 'chat',
     name: 'Chat',
     color: PETAL.blue,
-    shot: '/assets/tour/chat.webp',
+    shot: asset('/assets/tour/chat.webp'),
     alt: 'Chat: a study-week plan answered as a table with a checklist, past chats grouped by day in the sidebar.',
     title: 'Talk to any local model.',
     lead: 'Images, PDFs, Word and Excel files, or a whole folder as context. Tables, code and checklists come out clean.',
@@ -22,7 +22,7 @@ const PAGES = [
     id: 'work',
     name: 'Work',
     color: PETAL.red,
-    shot: '/assets/tour/work.webp',
+    shot: asset('/assets/tour/work.webp'),
     alt: 'Work: Lotus deployed three agents, Researcher, Writer and Checker, and combined their parts into a Knee plan document shown in the Artifacts panel.',
     title: 'Describe a job. Get files back.',
     lead: 'Lotus plans the work, sends agents out side by side and hands back documents, tables, web pages and code.',
@@ -36,7 +36,7 @@ const PAGES = [
     id: 'images',
     name: 'Images',
     color: PETAL.orange,
-    shot: '/assets/tour/images.webp',
+    shot: asset('/assets/tour/images.webp'),
     alt: 'Images: example prompts on an empty canvas, with a parameters panel for canvas size, resolution, images per run, LoRA and sampling.',
     title: 'Pictures on your own GPU.',
     lead: 'Text to image and image to image, with every setting in reach and example prompts to start from.',
@@ -50,7 +50,7 @@ const PAGES = [
     id: 'voice',
     name: 'Voice',
     color: PETAL.yellow,
-    shot: '/assets/tour/voice.webp',
+    shot: asset('/assets/tour/voice.webp'),
     alt: 'Voice: a past voice call about planning a study week, with Summarize in Chat and Call Again buttons.',
     title: 'Talk out loud. Lotus talks back.',
     lead: 'Voice calls, speech in any voice, stories and transcripts, with nothing extra to install.',
@@ -64,7 +64,7 @@ const PAGES = [
     id: 'tasks',
     name: 'Tasks',
     color: PETAL.green,
-    shot: '/assets/tour/tasks.webp',
+    shot: asset('/assets/tour/tasks.webp'),
     alt: 'Tasks: a board with Backlog, To do, In progress, Review and Done columns, and tabs for Routines, Skills, Memory, Soul and Plugins.',
     title: 'A board you share with Lotus.',
     lead: 'Hand a card to Lotus and it plans the steps, does them and leaves the result for you to review.',
@@ -136,7 +136,7 @@ export const Tour: React.FC = () => {
           </div>
         </div>
         <p className="mt-4 text-center text-[0.8125rem] text-[#86868b]">
-          Real screenshots of Lotus 0.11. Each petal of the logo is a page, and each page takes its colour.
+          Real screenshots from an earlier preview of Lotus. Each petal of the logo is a page, and each page takes its colour.
         </p>
 
         <div className="mt-10 grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">

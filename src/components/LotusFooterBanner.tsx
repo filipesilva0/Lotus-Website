@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { asset } from '../site';
 
 export const LotusFooterBanner: React.FC = () => {
   const containerRef = useRef<HTMLElement>(null);
@@ -59,7 +60,7 @@ export const LotusFooterBanner: React.FC = () => {
               fontSize: 'clamp(6rem, 19vw, 15rem)',
               lineHeight: 0.8,
               padding: '0.08em 0.06em 0.12em',
-              backgroundImage: `url('/assets/lotus-banner-bg.png'), linear-gradient(90deg, #1a73e8 0%, #ff2d55 24%, #ff6b00 50%, #ffd60a 74%, #30d158 100%)`,
+              backgroundImage: `url('${asset('/assets/lotus-banner-bg.png')}'), linear-gradient(90deg, #1a73e8 0%, #ff2d55 24%, #ff6b00 50%, #ffd60a 74%, #30d158 100%)`,
               backgroundSize: '104% 104%, 100% 100%',
               backgroundPosition: `${bgPosX}% ${bgPosY}%, center`,
               backgroundRepeat: 'no-repeat',

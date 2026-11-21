@@ -1,4 +1,18 @@
 // One place for links and facts that appear in more than one section.
+
+/** A link inside this site. The site may live under a sub-path (GitHub Pages: /Lotus-Website/). */
+export const href = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, '')}${path}`;
+/** A file in public/ (images, llms.txt). */
+export const asset = (path: string) => href(path);
+
+/** The Microsoft Store listing. null until Lotus is published there: the button shows "Coming soon". */
+export const STORE_URL: string | null = null;
+
+/** Pro. The buy button stays disabled ("Coming soon") while BUY_URL is null. */
+export const PRO = { price: 59, founderPrice: 39, founderSeats: 500, renewal: 29, trialDays: 14, devices: 3, refundDays: 14 } as const;
+export const BUY_URL: string | null = null;
+
+export const ISSUES = 'https://github.com/filipesilva0/Lotus/issues';
 export const REPO = 'https://github.com/filipesilva0/Lotus';
 export const RELEASES = `${REPO}/releases`;
 // The release workflow in the app repo publishes every build under these fixed names, so a
@@ -14,7 +28,7 @@ export const FILES = {
 } as const;
 
 /** Shown until the newest release's version has been read from GitHub. */
-export const VERSION = '0.11.0';
+export const VERSION = '0.16.5';
 
 /** Version of the newest published release (e.g. "0.2.0"), or null if it can't be read. */
 export async function latestVersion(): Promise<string | null> {

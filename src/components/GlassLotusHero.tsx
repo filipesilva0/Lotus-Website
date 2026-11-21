@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { asset } from '../site';
 
 interface GlassLotusHeroProps {
   className?: string;
@@ -62,7 +63,7 @@ export const GlassLotusHero: React.FC<GlassLotusHeroProps> = ({
         <div className="relative w-full h-full flex items-center justify-center">
           {/* Real Lotus Flower Artwork - Seamless screen blending on pure black */}
           <img
-            src="/assets/lotus-hero.png"
+            src={asset('/assets/lotus-hero.png')}
             alt="Lotus Local AI Studio"
             className="w-full h-full object-contain pointer-events-none mix-blend-screen drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)]"
             referrerPolicy="no-referrer"
