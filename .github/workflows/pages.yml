@@ -1,0 +1,56 @@
+# Builds the site on every pull request (as a check) and publishes it to GitHub Pages from main.
+# One-time setup: Settings → Pages → Source: "GitHub Actions".
+name: Site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run lint
+      - name: Build
+        run: npm run build
+        env:
+          # Pages serves this repo from /Lotus-Website/ until a custom domain is set up.
+          BASE_PATH: ${{ vars.SITE_BASE_PATH || '/Lotus-Website/' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://filipesilva0.github.io/Lotus-Website' }}
+      - name: Check every page was written
+        run: |
+          for p in index.html pricing/index.html download/index.html docs/index.html privacy/index.html gpu/index.html gpu/rtx-4060/index.html compare/lm-studio/index.html 404.html llms.txt sitemap.xml; do
+            test -s "dist/$p" || { echo "missing dist/$p"; exit 1; }
+          done
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PETAL } from '../site';
+import { PETAL , asset } from '../site';
 
 const ENGINES = [
   { name: 'llama.cpp', kind: 'Chat models', uses: 'Chat, Work, research, tasks', alt: 'Ollama', color: PETAL.blue },
@@ -32,7 +32,7 @@ export const HowItWorks: React.FC = () => (
         <div className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">Your computer</div>
         <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-white/[0.04] px-5 py-4 sm:flex-col sm:px-6 sm:py-7">
-            <img src="/assets/lotus-mark.png" alt="" className="h-10 w-10 sm:h-14 sm:w-14" />
+            <img src={asset('/assets/lotus-mark.png')} alt="" className="h-10 w-10 sm:h-14 sm:w-14" />
             <span className="text-[1.0625rem] font-semibold text-white">Lotus</span>
           </div>
           <ul className="relative min-w-0 space-y-3 sm:border-l sm:border-white/10 sm:pl-5">

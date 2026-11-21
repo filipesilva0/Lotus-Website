@@ -1,31 +1,15 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Tour } from './components/Tour';
-import { WhatsNew } from './components/WhatsNew';
-import { Features } from './components/Features';
-import { HowItWorks } from './components/HowItWorks';
-import { Privacy } from './components/Privacy';
-import { Download } from './components/Download';
 import { Footer } from './components/Footer';
 import { LotusFooterBanner } from './components/LotusFooterBanner';
-import { useScrollBounce } from './hooks/useScrollBounce';
+import type { Route } from './routes';
 
-export default function App() {
-  const { bounceStyle } = useScrollBounce();
-
+export default function App({ route }: { route: Route }) {
   return (
-    <div style={bounceStyle} className="flex min-h-screen flex-col bg-black text-[#f5f5f7]">
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <Tour />
-        <WhatsNew />
-        <Features />
-        <HowItWorks />
-        <Privacy />
-        <Download />
-      </main>
+    <div className="flex min-h-screen flex-col bg-black text-[#f5f5f7]">
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[8px] focus:bg-white focus:px-3 focus:py-2 focus:text-black">Skip to content</a>
+      <Navbar path={route.path} />
+      <main id="main" className="flex-1">{route.render()}</main>
       <Footer />
       <LotusFooterBanner />
     </div>

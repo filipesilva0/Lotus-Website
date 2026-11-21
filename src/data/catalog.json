@@ -1,0 +1,1171 @@
+{
+ "source": "filipesilva0/Lotus@61fce26 src/models/library.ts",
+ "generated": "2026-11-21",
+ "classLabel": {
+  "cpu": "No graphics card",
+  "gpu-6": "4–6 GB graphics card",
+  "gpu-8": "8–10 GB graphics card",
+  "gpu-16": "12–16 GB graphics card",
+  "gpu-24": "24–32 GB graphics card",
+  "gpu-48": "48 GB+ graphics memory",
+  "apple-8": "Mac with 8 GB",
+  "apple-16": "Mac with 16–24 GB",
+  "apple-32": "Mac with 32–48 GB",
+  "apple-64": "Mac with 64 GB or more"
+ },
+ "chatPicks": {
+  "cpu": {
+   "quick": "qwen3.5-0.8b",
+   "balanced": "qwen3.5-2b",
+   "best": "qwen3.5-4b"
+  },
+  "gpu-6": {
+   "quick": "qwen3.5-2b",
+   "balanced": "nemotron-3-nano-4b",
+   "best": "qwen3.5-4b"
+  },
+  "gpu-8": {
+   "quick": "nemotron-3-nano-4b",
+   "balanced": "qwen3-8b",
+   "best": "qwen3.5-9b"
+  },
+  "gpu-16": {
+   "quick": "qwen3-8b",
+   "balanced": "gemma-4-12b",
+   "best": "gpt-oss-20b"
+  },
+  "gpu-24": {
+   "quick": "gemma-4-26b-a4b",
+   "balanced": "qwen3.6-27b",
+   "best": "qwen3.8-27b"
+  },
+  "gpu-48": {
+   "quick": "qwen3.6-35b-a3b",
+   "balanced": "nemotron-3.5-lightning-30b",
+   "best": "qwen3.8-27b"
+  },
+  "apple-8": {
+   "quick": "qwen3.5-0.8b",
+   "balanced": "qwen3.5-2b",
+   "best": "qwen3.5-4b"
+  },
+  "apple-16": {
+   "quick": "qwen3.5-4b",
+   "balanced": "qwen3-8b",
+   "best": "gemma-4-12b"
+  },
+  "apple-32": {
+   "quick": "gemma-4-26b-a4b",
+   "balanced": "qwen3.6-27b",
+   "best": "qwen3.8-27b"
+  },
+  "apple-64": {
+   "quick": "qwen3.6-35b-a3b",
+   "balanced": "qwen3.8-27b",
+   "best": "qwen3.5-122b-a10b"
+  }
+ },
+ "imagePicks": {
+  "cpu": {
+   "quick": "sd15",
+   "balanced": "flux2-klein-4b-q4",
+   "best": "z-image-turbo-q4"
+  },
+  "gpu-6": {
+   "quick": "sd15",
+   "balanced": "flux2-klein-4b-q4",
+   "best": "z-image-turbo-q4"
+  },
+  "gpu-8": {
+   "quick": "flux2-klein-4b-q4",
+   "balanced": "sdxl-base",
+   "best": "z-image-turbo-q4"
+  },
+  "gpu-16": {
+   "quick": "flux2-klein-4b",
+   "balanced": "z-image-turbo-q4",
+   "best": "flux2-klein-9b-q4"
+  },
+  "gpu-24": {
+   "quick": "flux2-klein-4b",
+   "balanced": "z-image-turbo",
+   "best": "qwen-image-q4"
+  },
+  "gpu-48": {
+   "quick": "z-image-turbo",
+   "balanced": "qwen-image-q4",
+   "best": "qwen-image"
+  },
+  "apple-8": {
+   "quick": "sd15",
+   "balanced": "flux2-klein-4b-q4",
+   "best": "z-image-turbo-q4"
+  },
+  "apple-16": {
+   "quick": "flux2-klein-4b-q4",
+   "balanced": "z-image-turbo-q4",
+   "best": "flux2-klein-9b-q4"
+  },
+  "apple-32": {
+   "quick": "z-image-turbo-q4",
+   "balanced": "z-image-turbo",
+   "best": "qwen-image-q4"
+  },
+  "apple-64": {
+   "quick": "z-image-turbo",
+   "balanced": "qwen-image-q4",
+   "best": "qwen-image"
+  }
+ },
+ "models": [
+  {
+   "id": "qwen3.5-0.8b",
+   "kind": "chat",
+   "title": "Qwen 3.5 0.8B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "The smallest useful model: quick on any processor, reads photos. Good for short questions, not long tasks.",
+   "tags": [
+    "Tiny",
+    "Vision"
+   ],
+   "vramGb": 1.5,
+   "diskGb": 0.7,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.5-2b",
+   "kind": "chat",
+   "title": "Qwen 3.5 2B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "Small enough for a laptop processor, still reads screenshots and photos.",
+   "tags": [
+    "Tiny",
+    "Vision"
+   ],
+   "vramGb": 3,
+   "diskGb": 2,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "phi-4-mini",
+   "kind": "chat",
+   "title": "Phi-4 Mini",
+   "maker": "Microsoft",
+   "licence": "MIT",
+   "blurb": "A 3.8B model that is good at maths and step-by-step answers for its size. Text only.",
+   "tags": [
+    "Small",
+    "Reasoning"
+   ],
+   "vramGb": 3.5,
+   "diskGb": 2.5,
+   "builtin": true
+  },
+  {
+   "id": "gemma-4-e2b",
+   "kind": "chat",
+   "title": "Gemma 4 E2B",
+   "maker": "Google",
+   "licence": "Apache-2.0",
+   "blurb": "Google's model for phones and laptops: light, multilingual, reads images.",
+   "tags": [
+    "Small",
+    "Vision"
+   ],
+   "vramGb": 4.5,
+   "diskGb": 4.1,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "llama3.2-3b",
+   "kind": "chat",
+   "title": "Llama 3.2 3B",
+   "maker": "Meta",
+   "licence": "Llama 3.2 licence",
+   "blurb": "Compact and quick on modest hardware. Picks the wrong tool often (22 of 31 real tasks).",
+   "tags": [
+    "Small"
+   ],
+   "vramGb": 3,
+   "diskGb": 2,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.5-4b",
+   "kind": "chat",
+   "title": "Qwen 3.5 4B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "Quick replies and reads screenshots and photos. Runs on laptops.",
+   "tags": [
+    "Small",
+    "Vision"
+   ],
+   "vramGb": 5,
+   "diskGb": 3.4,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "nemotron-3-nano-4b",
+   "kind": "chat",
+   "title": "Nemotron 3 Nano 4B",
+   "maker": "NVIDIA",
+   "licence": "NVIDIA Open Model",
+   "blurb": "Fast and light with a long memory. Passed 26 of Lotus's 31 real tasks in about two minutes.",
+   "tags": [
+    "Small",
+    "Tools"
+   ],
+   "vramGb": 4,
+   "diskGb": 2.8,
+   "tools": true,
+   "builtin": true
+  },
+  {
+   "id": "gemma-4-e4b",
+   "kind": "chat",
+   "title": "Gemma 4 E4B",
+   "maker": "Google",
+   "licence": "Apache-2.0",
+   "blurb": "The bigger of Google's laptop models: better writing and reasoning than E2B, reads images.",
+   "tags": [
+    "Small",
+    "Vision"
+   ],
+   "vramGb": 6.5,
+   "diskGb": 6,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "nemotron-3.5-bolt-e4b",
+   "kind": "chat",
+   "title": "Nemotron 3.5 Bolt E4B",
+   "maker": "NVIDIA",
+   "licence": "OpenMDW-1.1",
+   "blurb": "NVIDIA's newest small model (October 2026), built for tool use and coding on small GPUs. Text only in Lotus.",
+   "tags": [
+    "Small",
+    "Tools"
+   ],
+   "vramGb": 7,
+   "diskGb": 6.2,
+   "builtin": true
+  },
+  {
+   "id": "qwen3-8b",
+   "kind": "chat",
+   "title": "Qwen 3 8B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "The best tool user Lotus has tested on an 8 GB GPU: 30 of 31 real tasks.",
+   "tags": [
+    "Tools",
+    "Reasoning"
+   ],
+   "vramGb": 6.5,
+   "diskGb": 5,
+   "tools": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.5-9b",
+   "kind": "chat",
+   "title": "Qwen 3.5 9B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "Newer than Qwen 3 8B and reads images; a tight fit on an 8 GB card.",
+   "tags": [
+    "Vision",
+    "Reasoning"
+   ],
+   "vramGb": 7.5,
+   "diskGb": 6.6,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen2.5-coder-7b",
+   "kind": "chat",
+   "title": "Qwen 2.5 Coder 7B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "Tuned for writing and reviewing code.",
+   "tags": [
+    "Coding"
+   ],
+   "vramGb": 6,
+   "diskGb": 4.7,
+   "builtin": true
+  },
+  {
+   "id": "deepseek-r1-8b",
+   "kind": "chat",
+   "title": "DeepSeek-R1 8B",
+   "maker": "DeepSeek",
+   "licence": "MIT",
+   "blurb": "Shows its reasoning before answering.",
+   "tags": [
+    "Reasoning"
+   ],
+   "vramGb": 6.5,
+   "diskGb": 5,
+   "builtin": true
+  },
+  {
+   "id": "gemma-4-12b",
+   "kind": "chat",
+   "title": "Gemma 4 12B",
+   "maker": "Google",
+   "licence": "Apache-2.0",
+   "blurb": "Strong all-rounder with vision and tool use. Great for daily chat.",
+   "tags": [
+    "Vision",
+    "Tools"
+   ],
+   "vramGb": 9,
+   "diskGb": 7.3,
+   "tools": true,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3-14b",
+   "kind": "chat",
+   "title": "Qwen 3 14B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "The bigger Qwen 3: more knowledge and steadier long answers than the 8B. Text only.",
+   "tags": [
+    "Reasoning"
+   ],
+   "vramGb": 10.5,
+   "diskGb": 9,
+   "builtin": true
+  },
+  {
+   "id": "gpt-oss-20b",
+   "kind": "chat",
+   "title": "gpt-oss 20B",
+   "maker": "OpenAI",
+   "licence": "Apache-2.0",
+   "blurb": "OpenAI's open model: quick for its size because only part of it works on each word. Text only.",
+   "tags": [
+    "Reasoning"
+   ],
+   "vramGb": 13,
+   "diskGb": 11.6,
+   "builtin": true
+  },
+  {
+   "id": "mistral-small-3.2-24b",
+   "kind": "chat",
+   "title": "Mistral Small 3.2 24B",
+   "maker": "Mistral AI",
+   "licence": "Apache-2.0",
+   "blurb": "A careful writer that follows instructions closely and reads images. Strong in European languages.",
+   "tags": [
+    "Vision"
+   ],
+   "vramGb": 16.5,
+   "diskGb": 15.2,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "gemma-4-26b-a4b",
+   "kind": "chat",
+   "title": "Gemma 4 26B A4B",
+   "maker": "Google",
+   "licence": "Apache-2.0",
+   "blurb": "Nearly as smart as Gemma 4 31B but answers about as fast as a 4B model.",
+   "tags": [
+    "Vision",
+    "Fast"
+   ],
+   "vramGb": 19.5,
+   "diskGb": 18.1,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.8-27b",
+   "kind": "chat",
+   "title": "Qwen 3.8 27B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "The strongest open model that fits one 24 GB card (August 2026): agents, coding, reasoning, images.",
+   "tags": [
+    "Vision",
+    "Reasoning",
+    "Coding"
+   ],
+   "vramGb": 20,
+   "diskGb": 17.5,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.6-27b",
+   "kind": "chat",
+   "title": "Qwen 3.6 27B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "Qwen 3.8 27B's predecessor; well tested by the community for coding and agents.",
+   "tags": [
+    "Vision",
+    "Reasoning",
+    "Coding"
+   ],
+   "vramGb": 20,
+   "diskGb": 17.7,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.5-27b",
+   "kind": "chat",
+   "title": "Qwen 3.5 27B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "The February 2026 27B: strong reasoning and writing, reads images. Qwen 3.6 and 3.8 27B are newer.",
+   "tags": [
+    "Vision",
+    "Reasoning",
+    "Tools"
+   ],
+   "vramGb": 20,
+   "diskGb": 17.7,
+   "tools": true,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3-coder-30b-a3b",
+   "kind": "chat",
+   "title": "Qwen 3 Coder 30B A3B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "A fast coding model: writes, fixes and explains code across a whole project. Text only.",
+   "tags": [
+    "Coding",
+    "Fast"
+   ],
+   "vramGb": 20.5,
+   "diskGb": 18.6,
+   "builtin": true
+  },
+  {
+   "id": "gemma-4-31b",
+   "kind": "chat",
+   "title": "Gemma 4 31B",
+   "maker": "Google",
+   "licence": "Apache-2.0",
+   "blurb": "Google's largest open model: excellent writing and many languages, reads images.",
+   "tags": [
+    "Vision",
+    "Reasoning"
+   ],
+   "vramGb": 21.5,
+   "diskGb": 19.5,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.6-35b-a3b",
+   "kind": "chat",
+   "title": "Qwen 3.6 35B A3B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "Big knowledge, small-model speed: only 3B of its 35B work on each word. Needs a 32 GB card or Mac to fit well.",
+   "tags": [
+    "Vision",
+    "Coding",
+    "Fast"
+   ],
+   "vramGb": 24.5,
+   "diskGb": 23,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "nemotron-3.5-lightning-30b",
+   "kind": "chat",
+   "title": "Nemotron 3.5 Lightning 30B",
+   "maker": "NVIDIA",
+   "licence": "OpenMDW-1.1",
+   "blurb": "NVIDIA's fast agent model (August 2026) with a very long memory. Text only; needs 32 GB.",
+   "tags": [
+    "Fast",
+    "Reasoning"
+   ],
+   "vramGb": 27,
+   "diskGb": 25.3,
+   "builtin": true
+  },
+  {
+   "id": "gpt-oss-120b",
+   "kind": "chat",
+   "title": "gpt-oss 120B",
+   "maker": "OpenAI",
+   "licence": "Apache-2.0",
+   "blurb": "OpenAI's large open model. Needs about 70 GB of memory: a 96 GB Mac or a workstation. Text only.",
+   "tags": [
+    "Reasoning",
+    "Huge"
+   ],
+   "vramGb": 66,
+   "diskGb": 62.8,
+   "builtin": true
+  },
+  {
+   "id": "qwen3.5-122b-a10b",
+   "kind": "chat",
+   "title": "Qwen 3.5 122B A10B",
+   "maker": "Alibaba",
+   "licence": "Apache-2.0",
+   "blurb": "The largest model here; reads images. Needs a 128 GB Mac or a workstation.",
+   "tags": [
+    "Vision",
+    "Reasoning",
+    "Huge"
+   ],
+   "vramGb": 82,
+   "diskGb": 77.4,
+   "vision": true,
+   "builtin": true
+  },
+  {
+   "id": "flux2-klein-4b",
+   "kind": "image",
+   "title": "FLUX.2 Klein 4B",
+   "maker": "Black Forest Labs",
+   "licence": "Apache-2.0",
+   "blurb": "Four steps, about a second per image on a modern GPU. Ideal for drafts.",
+   "tags": [],
+   "vramGb": 10,
+   "diskGb": 16,
+   "builtin": true
+  },
+  {
+   "id": "z-image-turbo",
+   "kind": "image",
+   "title": "Z-Image Turbo",
+   "maker": "Alibaba Tongyi",
+   "licence": "Apache-2.0",
+   "blurb": "Photoreal images in eight steps, with readable text in English and Chinese.",
+   "tags": [],
+   "vramGb": 16,
+   "diskGb": 21,
+   "builtin": true
+  },
+  {
+   "id": "qwen-image",
+   "kind": "image",
+   "title": "Qwen-Image",
+   "maker": "Alibaba Qwen",
+   "licence": "Apache-2.0",
+   "blurb": "A 20B model with the best prompt following and text rendering here.",
+   "tags": [],
+   "vramGb": 24,
+   "diskGb": 30,
+   "builtin": true
+  },
+  {
+   "id": "flux2-klein-4b-q4",
+   "kind": "image",
+   "title": "FLUX.2 Klein 4B (small)",
+   "maker": "Black Forest Labs",
+   "licence": "Apache-2.0",
+   "blurb": "The 4-step FLUX.2 Klein in a smaller file: drafts and photo edits on a 6 GB card. Lotus's own engine only.",
+   "tags": [
+    "Small",
+    "Fast"
+   ],
+   "vramGb": 4.5,
+   "diskGb": 5.3,
+   "builtin": true
+  },
+  {
+   "id": "z-image-turbo-q4",
+   "kind": "image",
+   "title": "Z-Image Turbo (small)",
+   "maker": "Alibaba Tongyi",
+   "licence": "Apache-2.0",
+   "blurb": "Photoreal images with readable text in eight steps, sized for 8 GB cards. Lotus's own engine only.",
+   "tags": [
+    "Photoreal"
+   ],
+   "vramGb": 5.4,
+   "diskGb": 6.7,
+   "builtin": true
+  },
+  {
+   "id": "flux2-klein-9b-q4",
+   "kind": "image",
+   "title": "FLUX.2 Klein 9B (small)",
+   "maker": "Black Forest Labs",
+   "licence": "FLUX Non-Commercial",
+   "blurb": "Sharper and more varied than Klein 4B, still four steps. Personal, non-commercial use only. Lotus's own engine only.",
+   "tags": [
+    "Non-commercial"
+   ],
+   "vramGb": 7.5,
+   "diskGb": 11,
+   "builtin": true
+  },
+  {
+   "id": "qwen-image-q4",
+   "kind": "image",
+   "title": "Qwen-Image (small)",
+   "maker": "Alibaba Qwen",
+   "licence": "Apache-2.0",
+   "blurb": "Qwen-Image's prompt following and text rendering in a 13 GB file, for 16–24 GB cards. Lotus's own engine only.",
+   "tags": [
+    "Text in images"
+   ],
+   "vramGb": 15,
+   "diskGb": 18,
+   "builtin": true
+  },
+  {
+   "id": "sdxl-base",
+   "kind": "image",
+   "title": "Stable Diffusion XL",
+   "maker": "Stability AI",
+   "licence": "CreativeML Open RAIL++-M",
+   "blurb": "The classic 1024 px model most LoRAs are made for. Comes with the fixed SDXL VAE.",
+   "tags": [
+    "Classic"
+   ],
+   "vramGb": 7,
+   "diskGb": 7.3,
+   "builtin": true
+  },
+  {
+   "id": "sd15",
+   "kind": "image",
+   "title": "Stable Diffusion 1.5",
+   "maker": "RunwayML",
+   "licence": "CreativeML Open RAIL-M",
+   "blurb": "Small and fast 512 px model with thousands of add-ons. The only image model that is bearable without a graphics card (about a minute an image).",
+   "tags": [
+    "Classic",
+    "Small"
+   ],
+   "vramGb": 4,
+   "diskGb": 4.4,
+   "builtin": true
+  },
+  {
+   "id": "kokoro",
+   "kind": "voice",
+   "title": "Kokoro",
+   "maker": "hexgrad",
+   "licence": "Apache-2.0",
+   "blurb": "82M parameters, 50 ready-made voices, fast even without a GPU.",
+   "tags": [
+    "Many voices"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.35,
+   "builtin": true
+  },
+  {
+   "id": "piper-en-us-lessac",
+   "kind": "voice",
+   "title": "Piper · Lessac (US English)",
+   "maker": "Rhasspy",
+   "licence": "MIT",
+   "blurb": "A clear, tiny voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.07,
+   "builtin": true
+  },
+  {
+   "id": "piper-en-gb-alba",
+   "kind": "voice",
+   "title": "Piper · Alba (British English)",
+   "maker": "Rhasspy",
+   "licence": "MIT",
+   "blurb": "A tiny British English voice.",
+   "tags": [
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.07,
+   "builtin": true
+  },
+  {
+   "id": "piper-pt-pt-tugao",
+   "kind": "voice",
+   "title": "Piper · Tugão (European Portuguese)",
+   "maker": "Rhasspy",
+   "licence": "MIT",
+   "blurb": "A tiny voice for Portuguese from Portugal.",
+   "tags": [
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.07,
+   "builtin": true
+  },
+  {
+   "id": "piper-pt-br-faber",
+   "kind": "voice",
+   "title": "Piper · Faber (Brazilian Portuguese)",
+   "maker": "Rhasspy",
+   "licence": "MIT",
+   "blurb": "A tiny voice for Brazilian Portuguese.",
+   "tags": [
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.07,
+   "builtin": true
+  },
+  {
+   "id": "piper-pt-pt-dii-high",
+   "kind": "voice",
+   "title": "Piper · Dii (European Portuguese)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A clearer, more natural Piper voice; still small and quick on any computer.",
+   "tags": [
+    "Tiny",
+    "PT"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-pt-pt-miro-high",
+   "kind": "voice",
+   "title": "Piper · Miro (European Portuguese)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A clearer, more natural Piper voice; still small and quick on any computer.",
+   "tags": [
+    "Tiny",
+    "PT"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-pt-br-cadu-medium",
+   "kind": "voice",
+   "title": "Piper · Cadu (Brazilian Portuguese)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "PT"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-en-us-amy-medium",
+   "kind": "voice",
+   "title": "Piper · Amy (US English)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "EN"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-en-us-ryan-high",
+   "kind": "voice",
+   "title": "Piper · Ryan (US English)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A clearer, more natural Piper voice; still small and quick on any computer.",
+   "tags": [
+    "Tiny",
+    "EN"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.11,
+   "builtin": true
+  },
+  {
+   "id": "piper-es-es-davefx-medium",
+   "kind": "voice",
+   "title": "Piper · Davefx (Spanish, Spain)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "ES"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-es-mx-ald-medium",
+   "kind": "voice",
+   "title": "Piper · Ald (Spanish, Mexico)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "ES"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-fr-fr-siwis-medium",
+   "kind": "voice",
+   "title": "Piper · Siwis (French)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "FR"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-de-de-thorsten-medium",
+   "kind": "voice",
+   "title": "Piper · Thorsten (German)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "DE"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-it-it-paola-medium",
+   "kind": "voice",
+   "title": "Piper · Paola (Italian)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "IT"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-nl-nl-pim-medium",
+   "kind": "voice",
+   "title": "Piper · Pim (Dutch)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "NL"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-pl-pl-gosia-medium",
+   "kind": "voice",
+   "title": "Piper · Gosia (Polish)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "PL"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-ru-ru-irina-medium",
+   "kind": "voice",
+   "title": "Piper · Irina (Russian)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "RU"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-uk-ua-ukrainian-tts-medium",
+   "kind": "voice",
+   "title": "Piper · Ukrainian TTS (Ukrainian)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "UK"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.077,
+   "builtin": true
+  },
+  {
+   "id": "piper-tr-tr-dfki-medium",
+   "kind": "voice",
+   "title": "Piper · DFKI (Turkish)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "TR"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-ar-jo-kareem-medium",
+   "kind": "voice",
+   "title": "Piper · Kareem (Arabic)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "AR"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-hi-in-priyamvada-medium",
+   "kind": "voice",
+   "title": "Piper · Priyamvada (Hindi)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "HI"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "piper-zh-cn-huayan-medium",
+   "kind": "voice",
+   "title": "Piper · Huayan (Chinese)",
+   "maker": "Rhasspy",
+   "licence": "Varies by voice",
+   "blurb": "A small, clear voice that speaks instantly on any computer.",
+   "tags": [
+    "Tiny",
+    "ZH"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.064,
+   "builtin": true
+  },
+  {
+   "id": "pocket-tts",
+   "kind": "voice",
+   "title": "PocketTTS (voice cloning)",
+   "maker": "Kyutai",
+   "licence": "MIT code, CC-BY-4.0 weights",
+   "blurb": "Copies any voice from a few seconds of clear speech. Small and fast on the processor; English.",
+   "tags": [
+    "Cloning",
+    "Small"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.2,
+   "clones": true,
+   "builtin": true
+  },
+  {
+   "id": "zipvoice",
+   "kind": "voice",
+   "title": "ZipVoice (voice cloning)",
+   "maker": "k2-fsa",
+   "licence": "Apache-2.0",
+   "blurb": "Copies a voice from a recording plus its words (Lotus writes them with Whisper). English and Chinese.",
+   "tags": [
+    "Cloning",
+    "Chinese"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.2,
+   "clones": true,
+   "builtin": true
+  },
+  {
+   "id": "chatterbox-turbo",
+   "kind": "voice",
+   "title": "Chatterbox Turbo",
+   "maker": "Resemble AI",
+   "licence": "MIT",
+   "blurb": "Fast English voice cloning from a short sample, with expressive delivery.",
+   "tags": [
+    "Cloning"
+   ],
+   "vramGb": 4,
+   "diskGb": 1.5,
+   "clones": true,
+   "builtin": false
+  },
+  {
+   "id": "qwen3-tts-1.7b",
+   "kind": "voice",
+   "title": "Qwen3-TTS 1.7B",
+   "maker": "Alibaba Qwen",
+   "licence": "Apache-2.0",
+   "blurb": "The most natural cloning here, in ten languages.",
+   "tags": [
+    "Cloning"
+   ],
+   "vramGb": 8,
+   "diskGb": 4.5,
+   "clones": true,
+   "builtin": false
+  },
+  {
+   "id": "whisper-turbo",
+   "kind": "dictation",
+   "title": "Whisper Turbo",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "Dictation and transcription, about eight times faster than Whisper Large.",
+   "tags": [
+    "99 languages"
+   ],
+   "vramGb": 0,
+   "diskGb": 1,
+   "builtin": true
+  },
+  {
+   "id": "whisper-small",
+   "kind": "dictation",
+   "title": "Whisper Small",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "Lighter dictation that still understands Portuguese, Spanish and many more.",
+   "tags": [
+    "99 languages"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.36,
+   "builtin": true
+  },
+  {
+   "id": "whisper-tiny",
+   "kind": "dictation",
+   "title": "Whisper Tiny",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "The smallest Whisper: instant on old laptops, but makes more mistakes.",
+   "tags": [
+    "99 languages",
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.11,
+   "builtin": true
+  },
+  {
+   "id": "whisper-base",
+   "kind": "dictation",
+   "title": "Whisper Base",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "Small and quick in any language; fine for short dictation.",
+   "tags": [
+    "99 languages",
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.2,
+   "builtin": true
+  },
+  {
+   "id": "whisper-medium",
+   "kind": "dictation",
+   "title": "Whisper Medium",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "More accurate than Small for accents and names; noticeably slower on long recordings.",
+   "tags": [
+    "99 languages"
+   ],
+   "vramGb": 0,
+   "diskGb": 1.8,
+   "builtin": true
+  },
+  {
+   "id": "whisper-large-v3",
+   "kind": "dictation",
+   "title": "Whisper Large v3",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "The most accurate Whisper, for lectures and interviews. Several times slower than Turbo; give long files time.",
+   "tags": [
+    "99 languages",
+    "Accurate"
+   ],
+   "vramGb": 0,
+   "diskGb": 1,
+   "builtin": true
+  },
+  {
+   "id": "whisper-base-en",
+   "kind": "dictation",
+   "title": "Whisper Base (English)",
+   "maker": "OpenAI",
+   "licence": "MIT",
+   "blurb": "Very small and quick, English only.",
+   "tags": [
+    "English",
+    "Tiny"
+   ],
+   "vramGb": 0,
+   "diskGb": 0.16,
+   "builtin": true
+  }
+ ]
+}
